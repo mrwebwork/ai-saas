@@ -1,5 +1,7 @@
 "use client";
 
+//? Choosing between using MessageSquare ? MessagesSquare icons
+//* Icons from Lucide
 import {
   Code,
   ImageIcon,
