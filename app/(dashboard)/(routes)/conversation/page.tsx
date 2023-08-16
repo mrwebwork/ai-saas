@@ -1,5 +1,3 @@
-import { Fragment } from "react";
-
 import Heading from "@/components/Heading";
 
 import { MessageSquare } from "lucide-react";
