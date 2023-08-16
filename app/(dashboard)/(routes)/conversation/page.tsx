@@ -1,10 +1,18 @@
 import { Fragment } from "react";
 
+import Heading from "@/components/Heading";
+
+import { MessageSquare } from "lucide-react";
+
 const ConversationPage = () => {
   return (
-    <Fragment>
-      <h1>Hello Conversation Page!</h1>
-    </Fragment>
+    <Heading
+      title="Conversation"
+      description="Unveiling Our Premier Conversational AI."
+      Icon={MessageSquare}
+      iconColor="text-violet-500"
+      bgColor="bg-violet-500/10"
+    />
   );
 };
 
