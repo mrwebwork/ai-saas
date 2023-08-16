@@ -13,13 +13,13 @@ const MobileSidebar = () => {
   //* Delay rendering of component until after mount to prevent SSR issues
   const [isMounted, setIsMounted] = useState(false);
 
-  if (!isMounted) {
-    return null;
-  }
-
   useEffect(() => {
     setIsMounted(true);
   }, []);
+
+  if (!isMounted) {
+    return null;
+  }
 
   return (
     <Sheet>
