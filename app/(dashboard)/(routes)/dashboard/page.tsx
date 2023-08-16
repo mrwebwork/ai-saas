@@ -70,7 +70,7 @@ const DashboardPage = () => {
           Embrace the future today and see AI in action.
         </p>
       </div>
-      <div className="px-4 md:px-20 lg:px-32 space-y-3">
+      <div className="px-4 md:px-20 lg:px-32 space-y-3 max-w-7xl mx-auto">
         {tools.map((tool) => (
           <Card
             onClick={() => router.push(tool.href)}
