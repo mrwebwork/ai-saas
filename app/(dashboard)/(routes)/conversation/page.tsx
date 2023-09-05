@@ -6,11 +6,13 @@ import { useRouter } from "next/navigation";
 
 import axios from "axios";
 
+import OpenAI from "openai";
+
 import { useForm } from "react-hook-form";
 
 import { MessageSquare } from "lucide-react";
 
-import OpenAI from "openai";
+import { cn } from "@/lib/utils";
 
 //* Validation Schema
 import * as z from "zod";
@@ -21,11 +23,12 @@ import { formSchema } from "./constants";
 import Heading from "@/components/Heading";
 import { Empty } from "@/components/Empty";
 import { Loader } from "@/components/Loader";
+import { Avatar } from "@/components/ui/avatar";
+import { BotAvatar } from "@/components/BotAvatar";
 
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 
 const ConversationPage = () => {
   const router = useRouter();
@@ -126,7 +129,8 @@ const ConversationPage = () => {
                     : "bg-muted"
                 )}
               >
-                {message.content}
+                {message.role === "user" ? <Avatar /> : <BotAvatar />}
+                <p className="text-sm">{message.content}</p>
               </div>
             ))}
           </div>
